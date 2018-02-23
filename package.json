@@ -1,0 +1,34 @@
+{
+  "name": "genie-router-plugin-web-client",
+  "version": "1.0.0",
+  "description": "A web client for Genie Router, allows you to send messages via a webbrowser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matueranet/genie-router-plugin-web-client.git"
+  },
+  "keywords": [
+    "plugin",
+    "genie-router",
+    "web",
+    "client"
+  ],
+  "author": "matueranet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matueranet/genie-router-plugin-web-client/issues"
+  },
+  "homepage": "https://github.com/matueranet/genie-router-plugin-web-client#readme",
+  "devDependencies": {
+    "standard": "^10.0.3"
+  },
+  "genieRouterPlugin": {
+    "name": "web-client"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1"
+  }
+}
