@@ -19,7 +19,8 @@ function startChat (endpoint) {
 
 function sendMessage (input) {
   var inputObj = {input: input, metadata: {userId: userId}}
-  $('.chat').append(templateUserMessage.replace('{{text}}', input))
+  addMessage(templateUserMessage, input)
+
   $.ajax({
     url: genieRouterEndpoint,
     method: 'POST',
@@ -27,12 +28,24 @@ function sendMessage (input) {
     data: JSON.stringify(inputObj)
   })
     .done(function (response) {
-      $('.chat').append(templateRouterMessage.replace('{{text}}', response.message.message))
+      addMessage(templateRouterMessage, response.message.message)
     })
     .fail(function (error) {
       console.log(error)
-      $('.chat').append(templateRouterMessage.replace('{{text}}', 'Error, unfortunately. Try again.'))
+      addMessage(templateRouterMessage, 'Error, unfortunately. Try again.')
     })
+}
+
+// Uses http://jsfiddle.net/dotnetCarpenter/KpM5j/
+function addMessage (template, message) {
+  var out = $('.messages')
+  var outElem = out.get(0)
+  var isScrolledToBottom = outElem.scrollHeight - outElem.clientHeight <= outElem.scrollTop + 1
+  out.append(template.replace('{{text}}', message))
+  // scroll to bottom if isScrolledToBotto
+  if (isScrolledToBottom) {
+    outElem.scrollTop = outElem.scrollHeight - outElem.clientHeight
+  }
 }
 
 function generateUserId () {

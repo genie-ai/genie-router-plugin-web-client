@@ -4,6 +4,10 @@ a {
 a:visited {
   color: #B721FF;
 }
+.brand {
+  position: absolute;
+  top: 4px;
+}
 .brand img {
   float: left;
   margin-right: 5px;
@@ -11,21 +15,34 @@ a:visited {
 
 .chat {
   margin-top: 5px;
-  width: 100%;
   border: 1px solid #000000;
   padding-top: 5px;
   overflow: hidden;
   background-color: #eeeeee;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 100%;
+}
+
+.messages {
+  overflow-y: scroll;
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  bottom: 50px;
 }
 
 .chat .msg {
   margin-left: 3px;
   clear: both;
+  min-width: 100px;
 }
 
 .chat .user {
   max-width: 75%;
   background-color: #0986ed;
+  float: left;
 }
 
 .router.triangle-isosceles:after {
@@ -43,21 +60,14 @@ a:visited {
   border-color: #0986ed transparent;
 }
 
-#send-chat input[type=submit] {
-  float: right
-}
-
-.uses {
-  font-size: 60%;
-  color: #999999;
+.input {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
 }
 
 .hidden {
   display: none
-}
-
-.container.header {
-  padding-bottom: 5px;
 }
 
 /* Bubble with an isoceles triangle
