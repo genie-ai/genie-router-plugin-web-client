@@ -4,9 +4,16 @@ var userId = null
 var templateUserMessage = $('.js-user-msg-template').html()
 var templateRouterMessage = $('.js-router-msg-template').html()
 
-function startChat (endpoint) {
+function startChat (endpoint, accessToken) {
   userId = generateUserId()
   genieRouterEndpoint = endpoint
+  if (accessToken) {
+    $.ajaxSetup({
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken)
+      }
+    })
+  }
 
   $('.chat-input').keypress(function (ev) {
     if (ev.which === 13) {
