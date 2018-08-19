@@ -1,16 +1,15 @@
 genie-router-plugin-web-client
 ==============================
 
-This plugin offers a web interface to chat with _genie-router_. It will register itself at _/web-client/_. Optionally,
-by configuring `registerOnRoot` to true, it will also listen on `/`.
+This plugin offers a web interface to chat with _genie-router_. It will register itself at _/web-client/_. Optionally, by configuring `registerOnRoot` to true, it will also listen on `/`.
 
-This plugin requires that the [http-api](https://github.com/matueranet/genie-router-plugin-api-http) plugin is installed.
+This plugin requires that the [http-api](https://github.com/genie-ai/genie-router-plugin-api-http) plugin is installed.
 
 # Installation
 
 At the plugin location ($HOME/.genie-router), type:
 
-    npm install --save matueranet/genie-router-plugin-web-client
+    npm install --save @genie-ai/genie-router-plugin-web-client
 
 Then add `web-client: {}`, to the `plugins` section of the genie-router configuration. Optionally add
 additional configuration items.
