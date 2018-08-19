@@ -1,14 +1,17 @@
 {
-  "name": "genie-router-plugin-web-client",
-  "version": "1.0.0",
+  "name": "@genie-ai/genie-router-plugin-web-client",
+  "version": "2.0.0",
   "description": "A web client for Genie Router, allows you to send messages via a webbrowser.",
   "main": "index.js",
   "scripts": {
-    "test": "standard"
+    "test": "eslint ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matueranet/genie-router-plugin-web-client.git"
+    "url": "git+https://github.com/genie-ai/genie-router-plugin-web-client.git"
+  },
+  "engines": {
+    "node": ">=8.10"
   },
   "keywords": [
     "plugin",
@@ -19,16 +22,19 @@
   "author": "matueranet",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matueranet/genie-router-plugin-web-client/issues"
+    "url": "https://github.com/genie-ai/genie-router-plugin-web-client/issues"
   },
-  "homepage": "https://github.com/matueranet/genie-router-plugin-web-client#readme",
+  "homepage": "https://github.com/genie-ai/genie-router-plugin-web-client#readme",
   "devDependencies": {
-    "standard": "^10.0.3"
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.9.0"
   },
   "genieRouterPlugin": {
-    "name": "web-client"
+    "name": "web-client",
+    "apiVersion": "1.0.0"
   },
   "dependencies": {
-    "bluebird": "^3.5.1"
+    "pify": "^4.0.0"
   }
 }

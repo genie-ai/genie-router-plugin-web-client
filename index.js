@@ -1,3 +1,3 @@
-const http = require('./lib/http')
+const http = require('./lib/http');
 
-module.exports = {http: http}
+module.exports = { http };
